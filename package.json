@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "start"   : "pnpm dev",
+    "dev"     : "pnpm install --no-lockfile && dotnet fable watch src -o js -e .jsx --sourceMaps --runFast vite",
+    "preview" : "pnpm install --no-lockfile && dotnet fable       src -o js -e .jsx --run pnpm vite preview",
+    "build"   : "pnpm install --no-lockfile && dotnet fable       src -o js -e .jsx --run pnpm vite build",
+    "clean"   : "rm -rf src/bin src/obj js dist node_modules pnpm-lock.yaml",
+    "serve"   : "pnpm vite serve"
+  },
+  "devDependencies": {
+    "vite": "4.2.0",
+    "vite-plugin-solid": "^2.6.1"
+  },
+  "dependencies": {
+    "solid-js": "^1.6.15"
+  }
+}
